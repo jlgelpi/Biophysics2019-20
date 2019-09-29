@@ -10,16 +10,16 @@ parser = PDBParser()
 
 st = parser.get_structure('estructura', '1ubq.pdb')
 
-selec=[]
-aa=["ARG"]
+selec = []
+aa = ["ARG"]
 
 for res in st.get_residues():
     if res.get_resname() in aa:
         selec.append(res)
-        print(res.get_resname(),res.id)	
+        print(res.get_resname(), res.id)
 
 print("Coordinates:")
 for res in selec:
-    for atom in res.get_atoms():   # Replace get_atoms with get_atom if you get an Error!
-        print(res.get_resname(),res.id,
-        atom.get_name(),atom.get_coord())
+    for atom in res.get_atoms(): 
+        print(res.get_resname(), res.id,
+              atom.get_name(), atom.get_coord())
