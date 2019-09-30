@@ -1,14 +1,12 @@
 #! /usr/bin/python3
 #
-# Simple program to print ARG residues
-# iteration over atoms
+""" Simple program to print ARG residues iteration over atoms """
 
-from Bio.PDB.NeighborSearch import NeighborSearch
 from Bio.PDB.PDBParser import PDBParser
 
 parser = PDBParser()
 
-st = parser.get_structure('estructura', '1ubq.pdb')
+st = parser.get_structure('1UBQ', '1ubq.pdb')
 
 selec = []
 aa = ["ARG"]
@@ -16,7 +14,6 @@ aa = ["ARG"]
 for at in st.get_atoms():
     if at.get_parent().get_resname() in aa:
         selec.append(at)
-#        print(at)	
 
 print("Coordinates:")
 for atom in selec:

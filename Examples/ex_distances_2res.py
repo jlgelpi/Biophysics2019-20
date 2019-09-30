@@ -1,13 +1,13 @@
 #! /usr/bin/python3
 #
-# Simple program to print distances between residues
+""" Simple program to print distances between atoms """
 
 from Bio.PDB.PDBParser import PDBParser
 import numpy as np
 
 parser = PDBParser()
 
-st = parser.get_structure('estructura', '1ubq.pdb')
+st = parser.get_structure('1UBQ', '1ubq.pdb')
 
 #Selection of Residue 10 of Chain A
 res10 = st[0]["A"][10]
