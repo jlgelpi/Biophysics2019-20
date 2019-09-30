@@ -67,14 +67,11 @@ for at1, at2 in sorted(at_pairs, key=lambda at_pair: at_pair[0].serial_number):
     dist = at1 - at2
     if res1 not in hbs:
         hbs[res1] = {}
-    if res2 not in hbs[res1]:
+    if res2 not in hbs[res1] or dist < hbs[res1][res2][2]:
         hbs[res1][res2]= (at1, at2, dist)
-    else:
-        if dist < hbs[res1][res2][2]:
-            hbs[res1][res2] = (at1, at2, dist)
 
 for res1 in hbs:
-    for res2 in hbs[res1]:
+    for res2 in hbs[res1]: ## TODO order by res2 as well
         print (
             atom_id(hbs[res1][res2][0]), ":", atom_id(hbs[res1][res2][1]), 
             hbs[res1][res2][2]
