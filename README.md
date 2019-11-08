@@ -18,6 +18,9 @@ External dependencies
     Bio.PDB.NeighborSearch (BioPython)
     Bio.PDB.PDBParser (Biopython)
 
+## Examples ##
+Code examples for Practical Session I (BioPython)
+
 ## Exercises ##
 ### prob217.py
 Simple script to solve Exercise 7 form 2.1 collection
