@@ -1,0 +1,10 @@
+usage: exercise5.py [options] pdb_file [> output_file]
+
+Generate a list of all CA atoms of given residue type with coordinates
+
+positional arguments:
+  pdb_file            Input PDB
+
+optional arguments:
+  -h, --help          show this help message and exit
+  --restype RES_TYPE  Residue type

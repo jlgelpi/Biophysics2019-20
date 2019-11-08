@@ -1,0 +1,10 @@
+usage: exercise2.py [options] pdb_file [> output_file]
+
+Getting CA pairs within max dist
+
+positional arguments:
+  pdb_file            Input PDB
+
+optional arguments:
+  -h, --help          show this help message and exit
+  --maxdist MAX_DIST  Max contact distance (A)

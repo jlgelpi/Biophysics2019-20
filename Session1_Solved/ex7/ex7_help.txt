@@ -1,0 +1,11 @@
+usage: exercise3.py [options] pdb_file [> output_file]
+
+Generate a list of all atoms for a given residue number
+
+positional arguments:
+  pdb_file     Input PDB
+
+optional arguments:
+  -h, --help   show this help message and exit
+  --res1 RES1  Residue 1 (as A23)
+  --res2 RES2  Residue 2 (as B25)

@@ -1,0 +1,12 @@
+usage: exercise2.py [options] pdb_file [> output_file]
+
+Determine all possible hydrogen bonds
+
+positional arguments:
+  pdb_file              Input PDB
+
+optional arguments:
+  -h, --help            show this help message and exit
+  --check               Check HB pairs and classify
+  --hb_max_dist HB_MAX_DIST
+                        Define HB max dist (default: 3.5A)

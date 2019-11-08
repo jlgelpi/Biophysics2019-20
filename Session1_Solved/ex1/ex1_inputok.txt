@@ -1,0 +1,4 @@
+max_dist  : 20
+at_list   : C,N
+output_path: None
+pdb_file  : <_io.TextIOWrapper name='1ubq.pdb' mode='r' encoding='UTF-8'>

@@ -1,0 +1,11 @@
+usage: exercise8 [-h] --chains CHAINS pdb_file output_pdb_file
+
+Obtain a PDB file including only a list of chains from the original structure
+
+positional arguments:
+  pdb_file         Input PDB
+  output_pdb_file  Output PDB
+
+optional arguments:
+  -h, --help       show this help message and exit
+  --chains CHAINS  Accepted chain list (comma sep)

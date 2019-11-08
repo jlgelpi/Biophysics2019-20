@@ -1,0 +1,2 @@
+usage: exercise6.py [options] pdb_file [> output_file]
+exercise6: error: the following arguments are required: pdb_file
