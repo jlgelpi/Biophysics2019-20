@@ -143,7 +143,7 @@ for ch in st[0]:
         totalSolvMon[ch.id] += solvA[res]
         total += elec[res] + vdw[res] + solvAB[res] - solvA[res]
         print(
-            '{:11} {:11.4f}{:11.4f}{:11.4f}{:11.4f} - {:11.4f}{:11.4f}{:11.4f}{:11.4f}'.format(
+            'D#{:11} {:11.4f}{:11.4f}{:11.4f}{:11.4f} - {:11.4f}{:11.4f}{:11.4f}{:11.4f}'.format(
                 en.residue_id(res),
                 elec[res], vdw[res], solvAB[res], solvA[res],
                 elec_ala[res], vdw_ala[res], solvAB_ala[res], solvA_ala[res]
@@ -163,10 +163,10 @@ for ch in st[0]:
         print(
             '{:11} {:11.4f}{:11.4f}{:11.4f}{:11.4f}{:11.4f}'.format(
                 en.residue_id(res),
-                totalIntElec - elec[res] + elec_ala[res],
-                totalIntVdw - vdw[res] + vdw_ala[res],
-                totalSolv - solvAB[res] + solvAB_ala[res],
-                totalSolvMon[ch.id] - solvA[res] + solvA_ala[res],
+                - elec[res] + elec_ala[res],
+                - vdw[res] + vdw_ala[res],
+                - solvAB[res] + solvAB_ala[res],
+                - solvA[res] + solvA_ala[res],
                 - elec[res] + elec_ala[res] - vdw[res] + vdw_ala[res] -solvAB[res] +\
                     solvAB_ala[res] -solvA[res] + solvA_ala[res]
             )
