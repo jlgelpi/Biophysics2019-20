@@ -10,24 +10,24 @@ from Bio.PDB.PDBParser import PDBParser
 from residue_library import ResiduesDataLib
 from forcefield import VdwParamset
 
-parser = argparse.ArgumentParser (
-    prog='structure_setup', 
+parser = argparse.ArgumentParser(
+    prog='structure_setup',
     description='basic structure setup'
 )
 
 
 parser.add_argument(
     '--rlib',
-    action='store', 
+    action='store',
     dest='reslib_file',
-    default='data/aaLib.lib', 
+    default='data/aaLib.lib',
     help='Residue Library'
 )
 parser.add_argument(
     '--vdw',
-    action='store', 
+    action='store',
     dest='vdwprm_file',
-    default='data/vdwprm', 
+    default='data/vdwprm',
     help='Vdw parameters'
 )
 parser.add_argument('pdb_file',help='Input PDB', type=open)
@@ -46,7 +46,7 @@ residue_library = ResiduesDataLib(args.reslib_file)
 ff_params = VdwParamset(args.vdwprm_file)
 
 parser = PDBParser(PERMISSIVE=1)
-print ('Parsing', args.pdb_file)
+print('Parsing', args.pdb_file)
 # load structure from PDB file of PDB ifle handler
 st = parser.get_structure('STR', args.pdb_file.name)
 
@@ -66,4 +66,4 @@ for at in st.get_atoms():
 # Calculating surfaces
 # The specific PATH to naccess script (in soft) is needed
 # Srf goes to .xtra field directly
-srf = NACCESS_atomic(st[0],naccess_binary ='PATH_TO_NACCESS' )
+srf = NACCESS_atomic(st[0], naccess_binary='PATH_TO_NACCESS')
