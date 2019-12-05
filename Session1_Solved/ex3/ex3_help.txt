@@ -1,0 +1,13 @@
+usage: exercise3.py [options] pdb_file [> output_file]
+
+Generate a list of all atoms for a given residue number
+
+positional arguments:
+  pdb_file          Input PDB
+
+optional arguments:
+  -h, --help        show this help message and exit
+  --resnum RES_NUM  Residue Number
+  --chain CHAIN_ID  Chain id (default A)
+  --residue RES_ID  Residue id (like A23) (optional, overrides --chain and
+                    --resnum)

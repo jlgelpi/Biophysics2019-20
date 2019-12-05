@@ -1,0 +1,4 @@
+usage: exercise1 [-h] [--maxdist MAX_DIST] [--atom_list AT_LIST]
+                 [-o OUTPUT_PATH]
+                 pdb_file
+exercise1: error: the following arguments are required: pdb_file

@@ -1,0 +1,11 @@
+chains    : A,C
+pdb_file  : <_io.TextIOWrapper name='../6axg.pdb' mode='r' encoding='UTF-8'>
+output_pdb_file: <_io.TextIOWrapper name='6axg_AC.pdb' mode='w' encoding='UTF-8'>
+PDB.filename: ../6axg.pdb
+12 chains found: A,B,C,D,E,F,G,H,I,J,K,L
+Removing chain B
+Removing chain D
+Removing chain F
+Removing chain H
+Removing chain J
+Removing chain L

@@ -1,6 +1,14 @@
-#! /usr/bin/python
+#! /usr/bin/python3
 
-# Build a command line (using argparse) with the following parameters
+"""
+    Build a command line (using argparse) with the following parameters
+      a. PDB file name (required)
+      b. Max contact distance (float, mandatory)
+      c. Atom list (string)
+      d. Output file name (string)
+    
+"""
+    
 
 import argparse
 
@@ -22,14 +30,20 @@ parser.add_argument(
     dest='at_list',
     help='Atom list, comma separated'
 )
+# 
+# optional argument
+# identical funcionality can be obtained by output redirections as in
+# exercise1 pdb_file > output
+#
 parser.add_argument(
     '-o',
     action='store',
+    type=argparse.FileType('w'),
     dest='output_path',
     help='Output file name'
 )
 
-parser.add_argument('pdb_file',help='Input PDB')
+parser.add_argument('pdb_file',type=open, help='Input PDB')
 
 args = parser.parse_args()
 

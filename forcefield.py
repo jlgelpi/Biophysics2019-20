@@ -5,12 +5,12 @@
 import sys
 
 class VdwParamset():
-    def __init__ (self, file_name):
+    def __init__(self, file_name):
         self.at_types = {}
         try:
             fh = open(file_name, "r")
         except OSError:
-            print ("#ERROR while loading parameter file (", file_name, ")")
+            print("#ERROR while loading parameter file (", file_name, ")")
             sys.exit(2)
         for line in fh:
             if line[0] == '#':

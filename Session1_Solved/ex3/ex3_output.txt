@@ -1,0 +1,20 @@
+Arguments
+res_num   : 23
+chain_id  : A
+res_id    : None
+pdb_file  : <_io.TextIOWrapper name='../1ubq.pdb' mode='r' encoding='UTF-8'>
+
+PDB file: ../1ubq.pdb
+Selected Chain: A, Residue number: 23
+
+Parsing ../1ubq.pdb
+
+Atom list
+ILE A23.N
+ILE A23.CA
+ILE A23.C
+ILE A23.O
+ILE A23.CB
+ILE A23.CG1
+ILE A23.CG2
+ILE A23.CD1
