@@ -10,6 +10,7 @@ use strict;
 my $baseChId = 'A';
 my $ter=0;
 while (<>) {
+    next if /(SOL|NA|CL)/;
     if (/^TER/) {
         $baseChId='B';
     }
