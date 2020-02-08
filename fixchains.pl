@@ -9,12 +9,25 @@ use strict;
 
 my $baseChId = 'A';
 my $ter=0;
-while (<>) {
+my $antResN=0;
+my ($hisdata, $pdb) = @ARGV;
+my $hid={};
+open HIS, $hisdata;
+while (<HIS>) {
+	chomp;
+	my ($lb, $num) = split;
+	$hid->{$num} = 1;
+}
+
+open PDB, $pdb;
+while (<PDB>) {
+    next if /(SOL|NA|CL)/;
     if (/^TER/) {
         $baseChId='B';
     }
     my $atomN;
     my $elem;
+    my $resN;
     if (/^ATOM/) {
         chomp;
         if (substr($_,12,1) ne ' ') {
@@ -29,6 +42,18 @@ while (<>) {
         $atomN =~ s/ OC1/ O  /;
         $atomN =~ s/ OC2/ OXT/;
         $elem = substr($_,13,1);           
+        $resN = substr($_,22,4)+0;
+	if ($resN < $antResN) {
+		$baseChId='B';
+	}
+	$antResN = $resN;
+	if (/HIS/) {
+		if ($hid->{$resN}) {
+			$_ =~ s/HIS/HID/;
+		} else {
+			$_ =~ s/HIS/HIE/;
+		}
+	}
         print substr($_,0,12).$atomN.substr($_,16,5).$baseChId.substr($_,22,-1)."$elem\n";
     } else {
         print;
