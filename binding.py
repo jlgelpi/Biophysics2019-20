@@ -146,13 +146,6 @@ for ch in st[0]:
         totalSolv += solvAB[res]
         totalSolvMon[ch.id] += solvA[res]
         total += elec[res] + vdw[res] + solvAB[res] - solvA[res]
-        print(
-            'D#{:11} {:11.4f}{:11.4f}{:11.4f}{:11.4f} - {:11.4f}{:11.4f}{:11.4f}{:11.4f}'.format(
-                en.residue_id(res),
-                elec[res], vdw[res], solvAB[res], solvA[res],
-                elec_ala[res], vdw_ala[res], solvAB_ala[res], solvA_ala[res]
-            )
-        )
 print("Interaction energy based in interface residues only")
 print('{:20}: {:11.4f}'.format('Total Elec Int.', totalIntElec))
 print('{:20}: {:11.4f}'.format('Total Vdw Int.', totalIntVdw))
@@ -161,6 +154,9 @@ print('{:19}{}: {:11.4f}'.format('Total Solv ', chids[0], totalSolvMon[chids[0]]
 print('{:19}{}: {:11.4f}'.format('Total Solv ', chids[1], totalSolvMon[chids[1]]))
 print('{:20}: {:11.4f}'.format('DGintAB-A-B', total))
 
+#Ala scanning not required. Finishing here
+import sys
+sys.exit()
 
 print("Ala Scanning: DDGs for X->Ala mutations on interface residues")
 for ch in st[0]:

@@ -78,11 +78,6 @@ def calc_int_energies(st, res):
                 vdw += e
                 if at1.id in ala_atoms: #GLY are included implicitly
                     vdw_ala += e
-        #DEGUG printing (optional)
-        print('DI#{:14}{:11.4f} {:11.4f} {:11.4f} {:11.4f}'.format(
-                atom_id(at1), elec, vdw, elec_ala, vdw_ala
-            )
-        )
     return elec, elec_ala, vdw, vdw_ala
 
 def MH_diel(r):
@@ -110,5 +105,4 @@ def calc_solvation(st, res):
         solv += s
         if at.id in ala_atoms:
             solv_ala += s
-        print('DS#{:14} {:11.4f} {:11.4f}'.format(atom_id(at), solv, solv_ala))
     return solv, solv_ala
