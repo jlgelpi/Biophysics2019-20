@@ -14,11 +14,11 @@ from residue_library import ResiduesDataLib
 from forcefield import VdwParamset
 import energies as en
 
-NACCESS_BINARY = '/home/gelpi/DEVEL/Biophysics/soft/NACCESS/naccess'
+NACCESS_BINARY = '/home/gelpi/DEVEL/BioPhysics/2019-20/soft/NACCESS/naccess'
 
 parse_cmd = argparse.ArgumentParser(
-    prog='structure_setup',
-    description='basic structure setup'
+    prog='binding',
+    description='binding energy calculation'
 )
 
 parse_cmd.add_argument(
