@@ -14,7 +14,7 @@ from residue_library import ResiduesDataLib
 from forcefield import VdwParamset
 import energies as en
 
-NACCESS_BINARY = '/home/gelpi/DEVEL/BioPhysics/2019-20/soft/NACCESS/naccess'
+NACCESS_BINARY = '/home/gelpi/DEVEL/Biophysics/soft/NACCESS/naccess'
 
 parse_cmd = argparse.ArgumentParser(
     prog='binding',
@@ -153,7 +153,7 @@ print('{:20}: {:11.4f}'.format('Total Solv AB', totalSolv))
 print('{:19}{}: {:11.4f}'.format('Total Solv ', chids[0], totalSolvMon[chids[0]]))
 print('{:19}{}: {:11.4f}'.format('Total Solv ', chids[1], totalSolvMon[chids[1]]))
 print('{:20}: {:11.4f}'.format('DGintAB-A-B', total))
-
+print("\#R {} {:11.4f} {:11.4f} {:11.4f} {:11.4f} {:11.4f} {:11.4f}".format(args.pdb_file.name, totalIntElec, totalIntVdw, totalSolv, totalSolvMon[chids[0]], totalSolvMon[chids[1]], total))
 #Ala scanning not required. Finishing here
 import sys
 sys.exit()
